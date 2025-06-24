@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: wa7r4z7wi-python
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: wa7r4z7wi-python 
+  name: wa7r4z7wi-python
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: wa7r4z7wi-python 

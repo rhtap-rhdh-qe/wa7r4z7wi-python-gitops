@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: wa7r4z7wi-python
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: wa7r4z7wi-python 
+  name: wa7r4z7wi-python
+spec:
+  port:
+    targetPort: 8081 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: wa7r4z7wi-python
+    weight: 100 
